@@ -12,6 +12,10 @@ Book::Book(std::string title, std::string author, bool isAvailable, std::string 
     _ISBN = ISBN;
 }
 
+std::string Book::getISBN() {
+    return _ISBN;
+}
+
 std::string Book::getTitle() {
     return _title;
 }
