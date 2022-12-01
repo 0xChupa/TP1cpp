@@ -1,8 +1,9 @@
 #include <iostream>
 #include <string>
 #include "book.h"
+#include "date.h"
 
 int main() {
-    Book book("Harry Potter", "J.K. Rowling", true);
-    std::cout << "Our only book is " << book.getTitle() << " by " << book.getAuthor() << std::endl;
+    Date testDate;
+    testDate.getYear();
 }
