@@ -20,16 +20,32 @@ int Date::getYear() {
     return _year;
 }
 
+std::string Date::getDate() {
+    return std::to_string(_day) + "/" + std::to_string(_month) + "/" + std::to_string(_year);
+}
+
 void Date::setDay(int day) {
-    _day = day;
+    if (day > 0 && day < 32) {
+        _day = day;
+    }
+    else
+        std::cout << "Invalid day" << std::endl;
 }
 
 void Date::setMonth(int month) {
-    _month = month;
+    if (month > 0 && month < 13) {
+        _month = month;
+    }
+    else
+        std::cout << "Invalid month" << std::endl;
 }
 
 void Date::setYear(int year) {
-    _year = year;
+    if (year > 0) {
+        _year = year;
+    }
+    else
+        std::cout << "Invalid year" << std::endl;
 }
 
 bool Date::isValid() {

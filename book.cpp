@@ -2,12 +2,12 @@
 #include <string>
 #include "book.h"
 
-Book::Book(std::string title, std::string author, bool isAvailable, std::string language, Date _dateOfPublication(int day,int month,int year), std::string genre, int ISBN) {
+Book::Book(std::string title, std::string author, bool isAvailable, std::string language, Date dateOfPublication, std::string genre, std::string ISBN) {
     _title = title;
     _author = author;
     _isAvailable = isAvailable;
     _language = language;
-    _dateOfPublication = _dateOfPublication;
+    _dateOfPublication = dateOfPublication;
     _genre = genre;
     _ISBN = ISBN;
 }
@@ -26,4 +26,8 @@ bool Book::isAvailable() {
 
 void Book::setAvailable(bool available) {
     _isAvailable = available;
+}
+
+std::string Book::getDateOfPublication() {
+    return _dateOfPublication.getDate();
 }

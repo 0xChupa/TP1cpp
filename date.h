@@ -1,3 +1,5 @@
+#pragma once
+
 #include <string>
 
 class Date {
@@ -10,6 +12,7 @@ class Date {
         int getDay();
         int getMonth();
         int getYear();
+        std::string getDate();
         void setDay(int day);
         void setMonth(int month);
         void setYear(int year);
