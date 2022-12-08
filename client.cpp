@@ -3,10 +3,10 @@
 #include <vector>
 #include "client.h"
 
-Client::Client(std::string id, std::string surname, std::string name) {
-    _id = id;
+Client::Client(std::string name, std::string surname, std::string id) {
     _surname = surname;
     _name = name;
+    _id = id;
 }
 
 std::string Client::getId() {

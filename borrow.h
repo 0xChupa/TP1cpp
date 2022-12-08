@@ -11,7 +11,7 @@ class Borrow {
         Date _dateOfBorrow;
         Date _dateOfReturn;
     public:
-        Borrow(std::string ISBN, std::string id, Date dateOfBorrow, Date dateOfReturn);
+        Borrow(std::string ISBN, std::string id, Date dateOfBorrow);
         std::string getISBN();
         std::string getId();
         std::string getDateOfBorrow();

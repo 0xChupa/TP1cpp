@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <ctime>
 
 class Date {
     private:
@@ -8,7 +9,7 @@ class Date {
         int _month;
         int _year;
     public:
-        Date(int month=1, int day=1, int year=2021);
+        Date(int day = 1, int month = 1, int year = 2022);
         int getDay();
         int getMonth();
         int getYear();

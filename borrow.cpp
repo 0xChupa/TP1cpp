@@ -2,11 +2,10 @@
 #include <iostream>
 #include "borrow.h"
 
-Borrow::Borrow(std::string ISBN, std::string id, Date dateOfBorrow, Date dateOfReturn) {
+Borrow::Borrow(std::string ISBN, std::string id, Date dateOfBorrow) {
     _ISBN = ISBN;
     _id = id;
     _dateOfBorrow = dateOfBorrow;
-    _dateOfReturn = dateOfReturn;
 }
 
 std::string Borrow::getISBN() {

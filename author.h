@@ -10,7 +10,7 @@ class Author {
         std::string _surname;
         Date _dateOfBirth;
     public:
-        Author(std::string name, std::string surname, Date dateOfBirth, int id);
+        Author(int id = 0, std::string name = "John", std::string surname = "Doe", Date dateOfBirth = Date(1, 1, 2000));
         std::string getName();
         std::string getSurname();
         int getId();

@@ -1,7 +1,5 @@
 #pragma once
 
-// create a class for the librairy with a function to add a book, an author, and a client, and a method to borrow a book and return it.
-
 #include <iostream>
 #include <string>
 #include <vector>
@@ -16,13 +14,19 @@ class Librairy {
         std::string _address;
         std::vector<Book> _books;
         std::vector<Author> _authors;
-        std::vector<Client> _clients;
         std::vector<Borrow> _borrows;
     public:
+        std::vector<Client> _clients;
         Librairy(std::string name, std::string address);
         void addBook(Book book);
         void addAuthor(Author author);
         void addClient(Client client);
         void borrowBook(Borrow borrow);
-        void returnBook(Borrow borrow);
+        std::string authorExist(Author author);
+        std::string getBook(std::string ISBN);
+        void wantBook();
+        void returnBook();
+        void displayAllBooks();
+        void booksByAuthor();
+        void booksBorrowedBy();
 };

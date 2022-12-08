@@ -1,8 +1,9 @@
 #include <iostream>
 #include <string>
 #include "book.h"
+#include "author.h"
 
-Book::Book(std::string title, std::string author, bool isAvailable, std::string language, Date dateOfPublication, std::string genre, std::string ISBN) {
+Book::Book(std::string title, Author author, bool isAvailable, std::string language, Date dateOfPublication, std::string genre, std::string ISBN) {
     _title = title;
     _author = author;
     _isAvailable = isAvailable;
@@ -21,7 +22,7 @@ std::string Book::getTitle() {
 }
 
 std::string Book::getAuthor() {
-    return _author;
+    return _author.getName();
 }
 
 bool Book::isAvailable() {

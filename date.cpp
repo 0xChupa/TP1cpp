@@ -7,7 +7,6 @@ Date::Date(int day, int month, int year) {
     _month = month;
     _year = year;
 }
-
 int Date::getDay() {
     return _day;
 }
