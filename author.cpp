@@ -2,7 +2,7 @@
 #include <iostream>
 #include "author.h"
 
-Author::Author(std::string name, std::string surname, Date dateOfBirth, int id) {
+Author::Author(int id, std::string name, std::string surname, Date dateOfBirth) {
     _name = name;
     _surname = surname;
     _dateOfBirth = dateOfBirth;

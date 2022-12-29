@@ -13,10 +13,10 @@ class Librairy {
         std::string _name;
         std::string _address;
         std::vector<Book> _books;
-        std::vector<Author> _authors;
         std::vector<Borrow> _borrows;
     public:
         std::vector<Client> _clients;
+        std::vector<Author> _authors;
         Librairy(std::string name, std::string address);
         void addBook(Book book);
         void addAuthor(Author author);

@@ -99,9 +99,9 @@ void Librairy::wantBook()
             }
             break;
         }
-        else
+        else if (_books[i].getISBN() == bookISBN && _books[i].isAvailable() == false)
         {
-            std::cout << "The book is not available. Sorry!" << std::endl;
+            std::cout << "The book is not available." << std::endl;
             break;
         }
     }
@@ -135,7 +135,7 @@ void Librairy::returnBook()
                 }
             }
         }
-        else
+        else if (_borrows[i].getISBN() == ISBN && _borrows[i].getId() != ID)
         {
             std::cout << "You have not borrowed this book." << std::endl;
         }
@@ -152,14 +152,26 @@ void Librairy::displayAllBooks()
 
 void Librairy::booksByAuthor()
 {
-    std::cout << "Which author are you looking for? Please input the author's name." << std::endl;
-    std::string name;
-    std::cin >> name;
-    for (int i = 0; i < _books.size(); i++)
+    std::cout << "Here is the list of all the authors: " << std::endl;
+    for (int i = 0; i < _authors.size(); i++)
     {
-        if (_books[i].getAuthor() == name)
+        std::cout << i << " - " << _authors[i].getName() << std::endl;
+    }
+    std::cout << "Which author are you looking for? Please input the ID of the author." << std::endl;
+    int id;
+    std::cin >> id;
+    for (int i = 0; i < _authors.size(); i++)
+    {
+        if (i == id)
         {
-            std::cout << _books[i].getTitle() << std::endl;
+            std::cout << "Here is the list of all the books from this author: " << std::endl;
+            for (int j = 0; j < _books.size(); j++)
+            {
+                if (_books[j].getAuthor() == _authors[i].getName())
+                {
+                    std::cout << j << " - " << _books[j].getTitle() << std::endl;
+                }
+            }
         }
     }
 }

@@ -20,6 +20,7 @@ std::string Client::setId() {
 void Client::getIsbnList() {
     for (int i = 0; i < _isbnList.size(); i++) {
         std::cout << _isbnList[i] << std::endl;
+
     }
 }
 
