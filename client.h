@@ -11,8 +11,11 @@ class Client{
         std::vector<std::string> _isbnList;
     public:
         Client(std::string id, std::string surname, std::string name);
+        std::string getName();
+        std::string getSurname();
         std::string getId();
         std::string setId();
-        void getIsbnList();
+        std::vector<std::string> getIsbnList();
         void addToIsbnList(std::string ISBN);
+        friend std::ostream& operator<<(std::ostream& os, const Client& c);
 };

@@ -36,3 +36,11 @@ void Book::setAvailable(bool available) {
 std::string Book::getDateOfPublication() {
     return _dateOfPublication.getDate();
 }
+
+std::ostream& operator<<(std::ostream& os, const Book& b) {
+    os << "Title: " << b._title << std::endl;
+    os << "ISBN: " << b._ISBN << std::endl;
+    os << "Language: " << b._language << std::endl;
+    os << "Genre: " << b._genre << std::endl;
+    return os;
+}

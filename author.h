@@ -14,4 +14,6 @@ class Author {
         std::string getName();
         std::string getSurname();
         int getId();
+        Date getDateOfBirth();
+        friend std::ostream& operator<<(std::ostream& os, const Author& a);
 };

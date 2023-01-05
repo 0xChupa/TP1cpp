@@ -23,5 +23,6 @@ class Book {
         bool isAvailable();
         void setAvailable(bool available);
         std::string getDateOfPublication();
+        friend std::ostream& operator<<(std::ostream& os, const Book& b);
 };
 

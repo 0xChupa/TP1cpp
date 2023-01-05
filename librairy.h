@@ -29,4 +29,7 @@ class Librairy {
         void displayAllBooks();
         void booksByAuthor();
         void booksBorrowedBy();
+        void BooksFromAuthor();
+        void percentageOfBooksBorrowed();
+        void clientLeaderboard();
 };

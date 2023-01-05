@@ -21,3 +21,13 @@ int Author::getId() {
     return _id;
 }
 
+Date Author::getDateOfBirth() {
+    return _dateOfBirth;
+}
+
+std::ostream& operator<<(std::ostream& os, const Author& a) {
+    os << "ID: " << a._id << std::endl;
+    os << "Name: " << a._name << std::endl;
+    os << "Surname: " << a._surname << std::endl;
+    return os;
+}

@@ -195,3 +195,66 @@ void Librairy::booksBorrowedBy()
         }
     }
 }
+
+void Librairy::BooksFromAuthor()
+{
+    std::cout << "Which author are you looking for? Please input the author's name." << std::endl;
+    std::string name;
+    std::cin >> name;
+    for (int i = 0; i < _authors.size(); i++)
+    {
+        if (_authors[i].getName() == name)
+        {
+            std::cout << "Here is the list of all the books from this author: " << std::endl;
+            for (int j = 0; j < _books.size(); j++)
+            {
+                if (_books[j].getAuthor() == _authors[i].getName())
+                {
+                    std::cout << j << " - " << _books[j].getTitle() << std::endl;
+                }
+            }
+        }
+    }
+}
+
+void Librairy::percentageOfBooksBorrowed()
+{
+    int total = 0;
+    int borrowed = 0;
+    for (int i = 0; i < _books.size(); i++)
+    {
+        total++;
+        if (_books[i].isAvailable() == false)
+        {
+            borrowed++;
+        }
+    }
+    std::cout << "The percentage of books borrowed is " << (borrowed / total) * 100 << "%" << std::endl;
+}
+
+void Librairy::clientLeaderboard()
+{
+    std::vector<Client> leaderboard;
+    for (int i = 0; i < _clients.size(); i++)
+    {
+        leaderboard.push_back(_clients[i]);
+    }
+
+    for (int i = 0; i < _clients.size(); i++)
+    {
+        for (int j = 0; j < _clients.size(); j++)
+        {
+            if (_clients[i].getIsbnList().size() > _clients[j].getIsbnList().size())
+            {
+                Client temp = leaderboard[i];
+                leaderboard[i] = leaderboard[j];
+                leaderboard[j] = temp;
+            }
+        }
+    }
+    std::cout << "Here is the leaderboard of the clients: " << std::endl;
+    for (int i = 0; i < _clients.size(); i++)
+    {
+        std::cout << i << " - " << leaderboard[i].getName() << " - " << leaderboard[i].getIsbnList().size() << std::endl;
+    }
+}

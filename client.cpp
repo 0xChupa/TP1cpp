@@ -17,13 +17,29 @@ std::string Client::setId() {
     return _id;
 }
 
-void Client::getIsbnList() {
-    for (int i = 0; i < _isbnList.size(); i++) {
-        std::cout << _isbnList[i] << std::endl;
-
+std::vector<std::string> Client::getIsbnList() {
+    return _isbnList;
     }
-}
 
 void Client::addToIsbnList(std::string ISBN) {
     _isbnList.push_back(ISBN);
+}
+
+std::ostream& operator<<(std::ostream& os, const Client& c) {
+    os << "Name: " << c._name << std::endl;
+    os << "Surname: " << c._surname << std::endl;
+    os << "ID: " << c._id << std::endl;
+    os << "ISBNs: " << std::endl;
+    for (const auto& isbn : c._isbnList) {
+        os << isbn << std::endl;
+    }
+    return os;
+}
+
+std::string Client::getName() {
+    return _name;
+}
+
+std::string Client::getSurname() {
+    return _surname;
 }
