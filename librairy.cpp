@@ -219,17 +219,15 @@ void Librairy::BooksFromAuthor()
 
 void Librairy::percentageOfBooksBorrowed()
 {
-    int total = 0;
-    int borrowed = 0;
-    for (int i = 0; i < _books.size(); i++)
+    int borrows = 0;
+    for (int i=0 ; i < _books.size() ; i++)
     {
-        total++;
         if (_books[i].isAvailable() == false)
         {
-            borrowed++;
+            borrows++;
         }
     }
-    std::cout << "The percentage of books borrowed is " << (borrowed / total) * 100 << "%" << std::endl;
+    std::cout << "The percentage of books borrowed is " << ((float)borrows / (float)_books.size()) * 100 << "%" << std::endl;
 }
 
 void Librairy::clientLeaderboard()
@@ -240,11 +238,11 @@ void Librairy::clientLeaderboard()
         leaderboard.push_back(_clients[i]);
     }
 
-    for (int i = 0; i < _clients.size(); i++)
+    for (int i = 0; i < leaderboard.size(); i++)
     {
-        for (int j = 0; j < _clients.size(); j++)
+        for (int j = 0; j < leaderboard.size(); j++)
         {
-            if (_clients[i].getIsbnList().size() > _clients[j].getIsbnList().size())
+            if (leaderboard[i].getIsbnList().size() > leaderboard[j].getIsbnList().size())
             {
                 Client temp = leaderboard[i];
                 leaderboard[i] = leaderboard[j];

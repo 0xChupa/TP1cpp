@@ -25,12 +25,12 @@ int main() {
     MyLibrairy.addBook(Book("So Long, and Thanks for All the Fish", Adams, true, "English", Date(1, 10, 1984), "Science Fiction", "9780345391834"));
     MyLibrairy.addBook(Book("Mostly Harmless", Adams, true, "English", Date(1, 10, 1992), "Science Fiction", "9780345391841"));
     MyLibrairy.addBook(Book("Harry Potter and the Philosopher's Stone", Rowling, true, "English", Date(26, 6, 1997), "Fantasy", "9780747532743"));
-    MyLibrairy.addBook(Book("Harry Potter and the Chamber of Secrets", Rowling, true, "English", Date(2, 7, 1998), "Fantasy", "9780747538495"));
-    MyLibrairy.addBook(Book("Harry Potter and the Prisoner of Azkaban", MyLibrairy._authors[2], true, "English", Date(8, 7, 1999), "Fantasy", "9780747546246"));
-    MyLibrairy.addBook(Book("Harry Potter and the Goblet of Fire", Rowling, true, "English", Date(8, 7, 2000), "Fantasy", "9780747546246"));
-    MyLibrairy.addBook(Book("Harry Potter and the Order of the Phoenix", Rowling, true, "English", Date(21, 6, 2003), "Fantasy", "9780747546246"));
-    MyLibrairy.addBook(Book("Harry Potter and the Half-Blood Prince", Rowling, true, "English", Date(16, 7, 2005), "Fantasy", "9780747546246"));
-    MyLibrairy.addBook(Book("Harry Potter and the Deathly Hallows", Rowling, true, "English", Date(21, 7, 2007), "Fantasy", "9780747546246"));
+    MyLibrairy.addBook(Book("Harry Potter and the Chamber of Secrets", Rowling, true, "English", Date(2, 7, 1998), "Fantasy", "9780807283158"));
+    MyLibrairy.addBook(Book("Harry Potter and the Prisoner of Azkaban", Rowling, true, "English", Date(8, 7, 1999), "Fantasy", "9780747546246"));
+    MyLibrairy.addBook(Book("Harry Potter and the Goblet of Fire", Rowling, true, "English", Date(8, 7, 2000), "Fantasy", "9788893819930"));
+    MyLibrairy.addBook(Book("Harry Potter and the Order of the Phoenix", Rowling, true, "English", Date(21, 6, 2003), "Fantasy", "9780439358064"));
+    MyLibrairy.addBook(Book("Harry Potter and the Half-Blood Prince", Rowling, true, "English", Date(16, 7, 2005), "Fantasy", "9780439791328"));
+    MyLibrairy.addBook(Book("Harry Potter and the Deathly Hallows", Rowling, true, "English", Date(21, 7, 2007), "Fantasy", "9788893814560"));
     MyLibrairy.addBook(Book("The Lord of the Rings", Tolkien, true, "English", Date(29, 7, 1954), "Fantasy", "9780261102381"));
     MyLibrairy.addBook(Book("The Fellowship of the Ring", Tolkien, true, "English", Date(29, 7, 1954), "Fantasy", "9780261102381"));
     MyLibrairy.addBook(Book("The Two Towers", Tolkien, true, "English", Date(11, 11, 1954), "Fantasy", "9780261102381"));
